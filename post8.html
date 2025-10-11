@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POST 8 - BASIS DATA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="konten">
+        <h3>Apa itu Relasi pada ERD?</h3>
+            <p>Relasi dalam ERD adalah hubungan yang terjadi antara satu atau lebih entitas. Relasi sendiri sering disebut dengan proses. 
+               Komponen ini digambarkan dengan lambang belah ketupat. Terdapat tiga jenis relasi yang digunakan dalam ERD dan perlu kamu ketahui, berikut adalah jenisnya.
+                <br>1. one to one (1:1)
+                <br>entitas hanya dapat memiliki relasi dengan satu entitas lain. Contohnya seperti data mahasiswa dengan NIM (Nomor Induk Siswa).
+                <br>2. one to many (1:*)
+                <br>satu entitas dapat memiliki relasi dengan beberapa entitas, begitu pula sebaliknya. Contoh dari implementasi one to many ini adalah jurusan dengan mahasiswanya.
+                <br>3. many to many (*:*)
+                <br>setiap entitas yang ada dapat memiliki relasi dengan entitas lain, begitu pula sebaliknya. Contoh dari relasi ini adalah mahasiswa dengan data terkait UKM (Unit Kegiatan Mahasiswa).
+        <a href="https://www.dicoding.com/blog/memahami-erd/">(Source)</a></p>
+    </div>
+    <div class="konten">
+        <h3>Mengapa many-to-many tidak baik digunakan pada ERD?</h3>
+        <p>Model many-to-many (banyak-ke-banyak) dalam Entity-Relationship Diagrams (ERD) seringkali tidak disarankan karena dapat memunculkan sejumlah masalah yang dapat sulit dikelola. 
+            Alasan mengapa many-to-many tidak baik digunakan dalam ERD antara lain:</p>
+        <p>1. Ambiguitas Data: Saat kita memiliki hubungan many-to-many, sulit untuk menentukan bagaimana data seharusnya terorganisasi. Ini dapat menghasilkan ambiguitas dalam desain database 
+            dan membuat sulit untuk mengambil informasi yang konsisten dari basis data.
+            <br>2. Kesulitan dalam Implementasi: Implementasi hubungan many-to-many dalam basis data biasanya melibatkan penggunaan tabel perantara (junction table) untuk mengatasi masalah tersebut. 
+            Hal ini dapat mengkomplekskan struktur database dan membuat operasi pengambilan data lebih rumit.
+            <br>3. Kinerja Database yang Buruk: Tabel perantara dalam hubungan many-to-many dapat menyebabkan masalah kinerja dalam database, terutama ketika berurusan dengan banyak data. 
+            Joining tabel-tabel tersebut dapat memperlambat kueri database.
+            <br>4. Keterbatasan Dalam Analisis dan Pelaporan: Ketika kita memiliki hubungan many-to-many, analisis dan pelaporan data bisa menjadi lebih sulit. Anda mungkin perlu melakukan 
+            banyak operasi gabungan (joins) untuk mengambil informasi yang bergantung pada hubungan tersebut.
+            <br>5. Kesulitan dalam Memahami dan Memelihara: ERD yang menggunakan hubungan many-to-many seringkali lebih sulit dipahami oleh orang yang tidak terlibat dalam desain awalnya. 
+            Hal ini dapat menyulitkan pemeliharaan dan pengembangan lebih lanjut.
+        </p>
+    </div>
+</body>
+<footer>
+    <h5>Kunjungi web UBP Karawang</h5>
+    <a href="https://www.ubpkarawang.ac.id" target="_blank">UBP Karawang</a>
+</footer>
+</html>

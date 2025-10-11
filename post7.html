@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POST 7 - BASIS DATA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="konten">
+        <h3>Apa itu Primary Key?</h3>
+        <p><strong>Primary Key</strong> adalah atribut atau kumpulan atribut yang digunakan untuk mengidentifikasi setiap baris data 
+            dalam sebuah tabel secara unik. Primary Key dipilh karena keunikan, sehingga dapat dibedakan dengan baris data 
+            yang lain. Primary Key berfungsi sebagai tanda pengenal dan penghubung antar tabel dalam suatu relational database. 
+            Primary Key juga sangat penting dalam proses pencarian data dan memastikan integritas antar data pada tabel. 
+            <br>Primary Key dapat dipilih dari satu atau kumpulan atribut yang memenuhi syarat-syarat tertentu, seperti harus 
+            berisi nilai unik, tidak boleh berisi nilai kosong, dan harus berdiri sendiri pada tabel atau atomik.
+            Dalam ERD, Primary Key direpresentasikan dengan simbol kunci atau underline pada atribut yang dipilih sebagai Primary Key. 
+            Primary Key juga dapat digunakan sebagai Foreign Key pada tabel lain untuk menghubungkan antar tabel.<a href="https://medium.com/@lauraamelia50/primary-key-foreign-key-dan-candidat-key-beserta-contohnya-1737cdf4fda5">(Source)</a>
+        </p><br>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Nama Tabel</th>
+                    <th>Primary Key</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tabel Mahasiswa</td>
+                    <td>NIM</td>
+                </tr>
+                <tr>
+                    <td>Tabel Barang</td>
+                    <td>Kode_Barang</td>
+                </tr>
+                <tr>
+                    <td>Tabel Pegawai</td>
+                    <td>ID_Pegawai</td>
+                </tr>
+                <tr>
+                    <td>Tabel Transaksi</td>
+                    <td>ID_Transaksi</td>
+                </tr>
+                <tr>
+                    <td>Tabel Karyawan Proyek</td>
+                    <td>ID_KaryawanProyek</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="konten">
+        <h3>Apa itu Foreign Key?</h3>
+        <p><strong>Foreign Key</strong> atribut atau kumpulan atribut yang digunakan untuk menghubungkan antara tabel master dengan tabel turunannya. 
+            Foreign Key digunakan untuk menciptakan hubungan antara dua tabel dalam database relasional. Foreign Key juga dikenal sebagai kunci 
+            tamu karena merupakan kunci yang terdapat pada tabel kedua atau child. Foreign Key merujuk pada suatu kolom yang unik untuk menghubungkan antar tabel.
+            <br>Dalam ERD, Foreign Key direpresentasikan dengan simbol kunci yang terhubung dengan Primary Key pada tabel lain. Foreign Key juga dapat 
+            digunakan sebagai Primary Key pada tabel turunan untuk menghubungkan antar tabel.<a href="https://medium.com/@lauraamelia50/primary-key-foreign-key-dan-candidat-key-beserta-contohnya-1737cdf4fda5">(Source)</a>
+        </p><br>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Nama Tabel</th>
+                    <th>Foregn Key</th>
+                    <th>Relasi Ke Tabel</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Penjualan Buku</td>
+                    <td>Kode_Buku</td>
+                    <td>Buku</td>
+                </tr>
+                <tr>
+                    <td>Pesawat</td>
+                    <td>ID_Penerbangan</td>
+                    <td>Penerbangan</td>
+                </tr>
+                <tr>
+                    <td>Pesanan</td>
+                    <td>ID_Pelanggan</td>
+                    <td>Pelanggan</td>
+                </tr>
+                <tr>
+                    <td>Transaksi</td>
+                    <td>ID_Transaksi</td>
+                    <td>Customer</td>
+                </tr>
+                <tr>
+                    <td>Karyawan Proyek</td>
+                    <td>ID_Karyawan</td>
+                    <td>Karyawan</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="konten">
+        <h3>Apa itu Candidate Key?</h3>
+        <p><strong>Candidate Key </strong>adalah kumpulan atribut yang dapat membedakan setiap baris data dalam sebuah relasi secara unik. 
+            Candidate Key juga dikenal sebagai kunci calon karena merupakan kunci yang memenuhi syarat untuk menjadi Primary Key. 
+            Candidate Key berfungsi sebagai tanda pengenal dan penghubung antar tabel dalam suatu relational database.
+            <br>Dalam ERD, Candidate Key direpresentasikan dengan simbol underline pada atribut yang memenuhi syarat untuk menjadi Primary Key. 
+            Candidate Key juga dapat digunakan sebagai Foreign Key pada tabel lain untuk menghubungkan antar tabel.<a href="https://medium.com/@lauraamelia50/primary-key-foreign-key-dan-candidat-key-beserta-contohnya-1737cdf4fda5">(Source)</a>
+        </p><br>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Nama Tabel</th>
+                    <th>Candidate Key</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mata Kuliah</td>
+                    <td>Kode_MataKuliah</td>
+                </tr>
+                <tr>
+                    <td>Buku</td>
+                    <td>Nomor_ISBN</td>
+                </tr>
+                <tr>
+                    <td>Mahasiswa</td>
+                    <td>NIM</td>
+                </tr>
+                <tr>
+                    <td>Siswa</td>
+                    <td>NISN</td>
+                </tr>
+                <tr>
+                    <td>Jasa Ekspedisi</td>
+                    <td>Nomor_Resi</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+<footer>
+    <h5>Kunjungi web UBP Karawang</h5>
+    <a href="https://www.ubpkarawang.ac.id" target="_blank">UBP Karawang</a>
+</footer>
+</html>
